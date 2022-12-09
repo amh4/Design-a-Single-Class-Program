@@ -19,6 +19,7 @@ class TODO
   def add(item)
     # takes a string and adds it to the my_list var
     # throws an exception if string is empty
+    # confirms item has been added
   end
 
   def print_todo
@@ -30,6 +31,7 @@ class TODO
     # says what has been removed
     # removes it from list
     # throws an exception if string is empty
+    # thros exception if list is empty
   end
 end
 ```
