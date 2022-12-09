@@ -4,6 +4,7 @@ class TODO
   end
 
   def add(item)
+    fail "No item given." if item.empty?
     return item
   end
 end
