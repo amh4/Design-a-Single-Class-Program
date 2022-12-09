@@ -10,11 +10,17 @@ class TODO
   end
 
   def print_todo
+    fail "You're all done!" if @my_list.empty?
     return @my_list
   end
 
   def task_complete(completed)
     fail "No item given." if completed.empty?
-    @my_list.delete(completed)
+    if @my_list.include?(completed)
+      @my_list.delete(completed)
+      return "#{completed} completed"
+    else
+      fail "No such item."
+    end
   end
 end

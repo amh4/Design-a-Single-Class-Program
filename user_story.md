@@ -23,6 +23,7 @@ class TODO
   end
 
   def print_todo
+    # throws exception if list is empty
     # returns my_list
   end
 
@@ -31,7 +32,7 @@ class TODO
     # says what has been removed
     # removes it from list
     # throws an exception if string is empty
-    # thros exception if list is empty
+    # throws exception if no such item
   end
 end
 ```
