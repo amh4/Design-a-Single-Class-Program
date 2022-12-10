@@ -13,6 +13,13 @@ RSpec.describe "playlist" do
     expect(songs.add("Hello")).to eq "That song is already on your playlist"
   end
 
+  it "can return multiple songs that have been added" do
+    songs = Playlist.new
+    songs.add("Hello")
+    songs.add("ABC")
+    expect(songs.print_tracks).to eq ["Hello", "ABC"]
+  end
+
   it "returns an error if the user has not entered a song" do
     songs = Playlist.new
     expect {songs.add("")}.to raise_error "You have not entered a song"
