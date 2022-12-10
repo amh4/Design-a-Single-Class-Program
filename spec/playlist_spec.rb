@@ -12,4 +12,14 @@ RSpec.describe "playlist" do
     songs.add("Hello")
     expect(songs.add("Hello")).to eq "That song is already on your playlist"
   end
+
+  it "returns an error if the user has not entered a song" do
+    songs = Playlist.new
+    expect {songs.add("")}.to raise_error "You have not entered a song"
+  end
+
+  it "Informs the user when the playlist is empty if they ask to view it" do
+    songs = Playlist.new
+    expect(songs.print_tracks).to eq "Your current playlist is empty"
+  end
 end

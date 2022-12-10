@@ -5,6 +5,7 @@ class Playlist
 
 
   def add(song)
+    fail "You have not entered a song" if song.empty?
     if @my_playlist.include? song
       return "That song is already on your playlist"
     else
@@ -13,6 +14,10 @@ class Playlist
   end
 
   def print_tracks
-    @my_playlist
+    if @my_playlist.empty?
+      return "Your current playlist is empty"
+    else
+      @my_playlist
+    end
   end
 end
